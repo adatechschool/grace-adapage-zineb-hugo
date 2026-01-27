@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Navbar from "./components/Navbar"; 
 
 let graceData = {
 name : "Grace Murray Hopper",
@@ -22,7 +23,7 @@ dod : "1er janvier 1992"
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+   <Route path="/" element={<Home data={graceData} />} />    
     </Routes>
   );
 }
