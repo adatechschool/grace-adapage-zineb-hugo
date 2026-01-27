@@ -22,9 +22,14 @@ dod : "1er janvier 1992"
 
 function App() {
   return (
+
+    <>
+    <Navbar />
     <Routes>
    <Route path="/" element={<Home data={graceData} />} />    
     </Routes>
+
+    </>
   );
 }
 
