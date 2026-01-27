@@ -1,33 +1,40 @@
-import type { GraceProps} from "../App";
+import type { GraceProps } from "../App";
 
-type HomeProps = Pick<GraceProps, "name" | "description" | "img">;
-;
+type HomeProps = {
+  data: GraceProps;
+};
 
-export default function Home({ name, description, img }: HomeProps) {
+export default function Home({ data }: HomeProps) {
   return (
-    <main className="min-h-screen pt-24 px-6 bg-gray-50">
-      
-      // 
-      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        
-        // Description 
+    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 pt-48">
+      <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+        {/* TEXTE */}
         <div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            {name}
+          <h1 className="text-5xl font-extrabold text-gray-900 mb-8 leading-tight">
+            {data.name}
           </h1>
 
-          <p className="text-lg text-gray-700 leading-relaxed">
-            {description}
+          <p className="text-lg text-gray-700 leading-relaxed text-justify">
+            {data.description}
           </p>
         </div>
 
-        // Image 
+        {/* IMAGE */}
         <div className="flex justify-center">
-          <img
-            src={img}
-            alt={name}
-            className="rounded-xl shadow-xl max-h-[450px] object-cover"
-          />
+          <div className="relative">
+
+            {/* Décor */}
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-red-200 rounded-full opacity-60 blur-2xl"></div>
+            <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-blue-200 rounded-full opacity-60 blur-2xl"></div>
+
+            {/* Image */}
+            <img
+              src={data.img}
+              alt={data.name}
+              className="relative rounded-3xl shadow-2xl max-h-[520px] object-cover"
+            />
+          </div>
         </div>
 
       </section>
