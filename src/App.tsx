@@ -21,7 +21,7 @@ import Quote from "./pages/Quotes";
   }
 
 
-function App() {
+export default function App() {
 
   let graceData = {
 name : "Grace Murray Hopper",
