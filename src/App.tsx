@@ -46,7 +46,7 @@ dod : "1er janvier 1992"
     <>
     <Navbar />
     <Routes>
-   <Route path="/" element={<Home data={graceData} />} />
+   <Route path="/" element={<Home name={graceData.name} description={graceData.description} img={graceData.img} />} />
    <Route path="/citations" element= {<Quote quotes = {graceData.quotes}/>} />     
     </Routes>
 
