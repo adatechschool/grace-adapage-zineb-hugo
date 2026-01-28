@@ -1,12 +1,12 @@
 import Navbar from "../components/Navbar";
 import type { GraceProps } from "../App";
 
-type DataProps = Pick<GraceProps, "quotes" | "logo">
+type DataProps = Pick<GraceProps, "quotes">
 
-export default function Quote({quotes, logo}: DataProps) {
+export default function Quote({quotes}: DataProps) {
   return (
     <>
-      <Navbar logo = {logo}/>
+      <Navbar/>
       <main className="min-h-screen bg-linear-to-br from-slate-50 to-slate-100 p-8">
         <h1 className="text-3xl text-center m-6 text-black">Citations</h1>
         <div className = "flex flex-row flex-wrap gap-6 mx-auto space-y-6 items-center justify-center">

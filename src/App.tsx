@@ -57,7 +57,7 @@ En 1951, elle conçoit le premier compilateur pour UNIVAC I (A-0 System). En 195
 
   return (
     <>
-      <Navbar logo={graceData.logo} />
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Home data={graceData} />} />
