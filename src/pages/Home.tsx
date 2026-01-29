@@ -20,7 +20,7 @@ export default function Home({ data }: HomeProps) {
             {data.name}
           </h1>
 
-          <p className="text-lg text-gray-700 leading-relaxed text-justify text-shadow-md">
+          <p className="text-lg text-gray-700 leading-relaxed text-justify text-shadow-md pb-4">
             {data.description}
           </p>
         </div>
