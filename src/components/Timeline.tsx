@@ -1,4 +1,4 @@
-import type { GraceProps } from "../pages/Frise";
+import type { GraceProps } from "../App";
 
 interface dataProps {
     data : GraceProps["timeline"][0]
