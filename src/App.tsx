@@ -6,6 +6,7 @@ import grace from "./assets/grace.svg";
 import Specificites from "./pages/Specificites";
 import Frise from "./pages/Frise";
 import Footer from "./components/Footer";
+import NotFound from "./pages/NotFound";
 
 
 export interface GraceProps {
@@ -52,14 +53,35 @@ En 1951, elle conçoit le premier compilateur pour UNIVAC I (A-0 System). En 195
     quotes: [
       {
         quote:
-          " A partir de maintenant, quand quelque chose ne fonctionne pas dans un ordinateur, on parlera de bug.",
-        date: "1984 ",
+          "A partir de maintenant, quand quelque chose ne fonctionne pas dans un ordinateur, on parlera de bug.",
+        date: "1984, après avoir trouvé un insecte dans une machine",
       },
       {
         quote:
-          " J'ai toujours été plus intéressée par le futur que par le passé. ",
-        date: "1994",
+          "J'ai toujours été plus intéressée par le futur que par le passé.",
+        date: "1987, cité par Reader's Digest",
       },
+      {
+        quote:
+          "J'ai reçu beaucoup de récompenses et j'en suis reconnaissante, mais le plus grand honneur que je puisse jamais recevoir est d'avoir eu le privilège de servir fièrement dans la Navy.",
+        date: "1986, dans le magazine Chips",
+      },{
+        quote:
+          "Avant la Seconde Guerre Mondiale, la vie était simple. Après, nous avons eu les systèmes informatiques.",
+        date: "The Wit and Wisdom of Grace Hopper (1987)",
+      },{
+        quote:
+          "L'être humain est allergique au changement. Il adore dire 'Nous avons toujours fait comme ça'. J'essaye de combattre cela. C'est pourquoi j'ai une horloge qui tourne à l'envers sur mon mur.",
+        date: "The Wit and Wisdom of Grace Hopper (1987)",
+      },{
+        quote:
+          "Nous inondons les gens d'informations. Un être humain doit transformer cette information en savoir ou connaissance. Nous avons tendance à oublier qu'un ordinateur ne posera jamais une question nouvelle.",
+        date: "The Wit and Wisdom of Grace Hopper (1987)",
+      },{
+        quote:
+          "On manage des choses, on 'lead' (dirige) des gens. Nous sommes allés trop loin avec le management et avons oublié le 'leadership' (direction). Il faudrait chasser les managers de Washington.",
+        date: "The Wit and Wisdom of Grace Hopper (1987)",
+      }
     ],
     astro: "Sagittaire",
     job: "Mathématicienne, programmeuse",
@@ -156,6 +178,8 @@ En 1951, elle conçoit le premier compilateur pour UNIVAC I (A-0 System). En 195
         <Route path="/citations" element={<Quote quotes={graceData.quotes} />} />
 
         <Route path="/frise" element={<Frise graceData={graceData}/>} />
+        
+        <Route path='*' element={<NotFound />} />
       </Routes>
 
       <Footer />
