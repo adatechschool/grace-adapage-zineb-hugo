@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Quote from "./pages/Quotes";
 import grace from "./assets/grace.svg";
+import Specificites from "./pages/Specificites";
 
 export interface GraceProps {
   name: string;
@@ -39,12 +40,12 @@ En 1951, elle conçoit le premier compilateur pour UNIVAC I (A-0 System). En 195
     quotes: [
       {
         quote:
-          "A partir de maintenant, quand quelque chose ne fonctionne pas dans un ordinateur, on parlera de bug.",
-        date: "1984",
+          " A partir de maintenant, quand quelque chose ne fonctionne pas dans un ordinateur, on parlera de bug.",
+        date: "1984 ",
       },
       {
         quote:
-          "J'ai toujours été plus intéressée par le futur que par le passé.",
+          " J'ai toujours été plus intéressée par le futur que par le passé. ",
         date: "1994",
       },
     ],
@@ -61,6 +62,9 @@ En 1951, elle conçoit le premier compilateur pour UNIVAC I (A-0 System). En 195
 
       <Routes>
         <Route path="/" element={<Home data={graceData} />} />
+
+        <Route path="/Specificites" element={<Specificites data={graceData} />} />
+
         <Route path="/citations" element={<Quote quotes={graceData.quotes} />} />
       </Routes>
     </>

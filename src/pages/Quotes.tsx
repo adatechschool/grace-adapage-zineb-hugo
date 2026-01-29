@@ -1,34 +1,35 @@
-import Navbar from "../components/Navbar";
 import type { GraceProps } from "../App";
 
-type DataProps = Pick<GraceProps, "quotes">
+type DataProps = Pick<GraceProps, "quotes">;
 
-export default function Quote({quotes}: DataProps) {
+export default function Quote({ quotes }: DataProps) {
   return (
-    <>
-      <Navbar/>
-      <main className="min-h-screen bg-linear-to-br from-slate-50 to-slate-100 p-8">
-        <h1 className="text-3xl text-center m-6 text-black">Citations</h1>
-        <div className = "flex flex-row flex-wrap gap-6 mx-auto space-y-6 items-center justify-center">
-        {quotes.map((e, index) => {
-            return (
-                <div key={index} className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-slate-300 overflow-hidden w-xl">
+    <main className="min-h-screen relative overflow-hidden pt-32 bg-gradient-to-br from-indigo-100 via-pink-100 to-yellow-100">
 
-                <div className="absolute top-0 left-0 w-1 h-full bg-linear-to-b from-blue-500 to-purple-500 transform origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-300" />
+      
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob top-10 left-20"></div>
+        <div className="absolute w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000 top-64 left-72"></div>
+        <div className="absolute w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000 top-32 left-1/2"></div>
+      </div>
 
-                <div className="absolute top-6 left-6 text-6xl text-slate-200 font-serif leading-none select-none">❝</div>
-                    <p className="relative text-lg text-slate-700 leading-relaxed pl-8 mb-4 italic">"{e.quote}"</p>
-                    <p className="text-sm text-slate-400 font-medium tracking-wide">{e.date}</p>
+      <section className="max-w-6xl mx-auto px-6 relative z-10">
+        <h1 className="text-5xl font-extrabold text-gray-900 mb-12 text-center tracking-wide">
+          Citations
+        </h1>
 
-                <div className="absolute bottom-6 right-6 text-6xl text-slate-200 font-serif leading-none select-none">❞</div>
-
-                <div className="absolute inset-0 bg-linear-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-10 transform -skew-x-12 group-hover:translate-x-full transition-all duration-1000" />
+        <div className="flex flex-wrap justify-center gap-8">
+          {quotes.map((q, i) => (
+            <div
+              key={i}
+              className="relative w-80 p-6 rounded-3xl bg-white/30 backdrop-blur-md border border-white/20 shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-500"
+            >
+              <p className="text-gray-900 text-lg italic mb-4">{q.quote}</p>
+              <p className="text-gray-500 font-medium text-sm text-right">— {q.date}</p>
             </div>
-            )
-        }) 
-        }
+          ))}
         </div>
+      </section>
     </main>
-    </>
   );
 }
