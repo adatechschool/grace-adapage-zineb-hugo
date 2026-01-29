@@ -5,6 +5,8 @@ import Quote from "./pages/Quotes";
 import grace from "./assets/grace.svg";
 import Specificites from "./pages/Specificites";
 import Frise from "./pages/Frise";
+import Footer from "./components/Footer";
+
 
 export interface GraceProps {
   name: string;
@@ -70,6 +72,8 @@ En 1951, elle conçoit le premier compilateur pour UNIVAC I (A-0 System). En 195
 
         <Route path="/frise" element={<Frise/>} />
       </Routes>
+
+      <Footer />
     </>
   );
 }

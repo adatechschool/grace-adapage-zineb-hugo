@@ -17,20 +17,62 @@ export default function Navbar() {
 
         
         <ul className="flex gap-10 text-lg text-gray-700 font-semibold">
+
           <li>
-            <Link to="/" className="hover:text-red-600 transition">
+            <Link to="/" className="relative
+                                        px-4 py-2 rounded-lg
+                                        bg-gradient-to-br from-indigo-100 to-pink-100
+                                        text-gray-900 font-medium
+                                        ring-1 ring-indigo-200
+                                        transition-all duration-300 ease-out
+                                        hover:ring-indigo-400
+                                        hover:scale-105
+                                        hover:shadow-[0_0_25px_rgba(99,102,241,0.35)] ">
               Accueil
             </Link>
           </li>
           <li>
-            <Link to="/specificites" className="hover:text-red-600 transition">
+            <Link to="/specificites" className="relative
+                                        px-4 py-2 rounded-lg
+                                        bg-gradient-to-br from-indigo-100 to-pink-100
+                                        text-gray-900 font-medium
+                                        ring-1 ring-indigo-200
+                                        transition-all duration-300 ease-out
+                                        hover:ring-indigo-400
+                                        hover:scale-105
+                                        hover:shadow-[0_0_25px_rgba(99,102,241,0.35)] ">
               Spécificités
             </Link>
           </li>
           <li>
-            <Link to="/citations" className="hover:text-red-600 transition">
+            <Link to="/citations" className="relative
+                                        px-4 py-2 rounded-lg
+                                        bg-gradient-to-br from-indigo-100 to-pink-100
+                                        text-gray-900 font-medium
+                                        ring-1 ring-indigo-200
+                                        transition-all duration-300 ease-out
+                                        hover:ring-indigo-400
+                                        hover:scale-105
+                                        hover:shadow-[0_0_25px_rgba(99,102,241,0.35)] ">
               Citations
             </Link>
+          </li>
+            <li>
+          <Link to="/frise" className=" relative
+                                        px-4 py-2 rounded-lg
+                                        bg-gradient-to-br from-indigo-100 to-pink-100
+                                        text-gray-900 font-medium
+                                        ring-1 ring-indigo-200
+                                        transition-all duration-300 ease-out
+                                        hover:ring-indigo-400
+                                        hover:scale-105
+                                        hover:shadow-[0_0_25px_rgba(99,102,241,0.35)] " >
+
+           Frise
+         </Link>
+
+
+
           </li>
         </ul>
 
