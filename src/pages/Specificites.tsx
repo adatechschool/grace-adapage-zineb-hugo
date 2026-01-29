@@ -4,7 +4,10 @@ type SpecificitesProps = { data: GraceProps };
 
 export default function Specificites({ data }: SpecificitesProps) {
   return (
-    <main className="min-h-screen relative overflow-hidden pt-32 bg-gradient-to-br from-indigo-100 via-pink-100 to-yellow-100">
+    <main className="min-h-screen pt-32
+                 bg-gradient-to-br from-indigo-100 via-pink-100 to-yellow-100
+                 dark:bg-gradient-to-br dark:from-slate-900 dark:via-indigo-950 dark:to-slate-900
+                 relative overflow-hidden">
 
       
       <div className="absolute inset-0 overflow-hidden">

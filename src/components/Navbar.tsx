@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import graceLogo from "../assets/grace.svg";
+import TimelineItem  from "./Timeline";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   return (
@@ -75,6 +77,8 @@ export default function Navbar() {
 
           </li>
         </ul>
+
+        <ThemeToggle /> 
 
       </div>
     </nav>

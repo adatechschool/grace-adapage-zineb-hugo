@@ -7,6 +7,8 @@ import Specificites from "./pages/Specificites";
 import Frise from "./pages/Frise";
 import Footer from "./components/Footer";
 import NotFound from "./pages/NotFound";
+import darkModeThemeoggle from "./components/ThemeToggle";
+
 
 
 export interface GraceProps {
