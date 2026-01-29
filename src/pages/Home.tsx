@@ -19,7 +19,7 @@ export default function Home({ data }: HomeProps) {
       <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
 
         <div>
-          <h1 className="text-6xl font-extrabold text-gray-900 mb-8 leading-tight tracking-wide">
+          <h1 className="text-6xl font-extrabold text-gray-900 mb-8 dark:text-white leading-tight tracking-wide">
             {data.name}
           </h1>
 

@@ -17,7 +17,7 @@ export default function Specificites({ data }: SpecificitesProps) {
       </div>
 
       <section className="max-w-6xl mx-auto px-6 relative z-10">
-        <h1 className="text-5xl font-extrabold text-gray-900 mb-16 text-center tracking-wide">
+        <h1 className="text-5xl font-extrabold text-gray-900 mb-16  dark:text-white text-center tracking-wide">
           Spécificités
         </h1>
 

@@ -4,7 +4,10 @@ type DataProps = Pick<GraceProps, "quotes">;
 
 export default function Quote({ quotes }: DataProps) {
   return (
-    <main className="min-h-screen relative overflow-hidden pt-32 bg-gradient-to-br from-indigo-100 via-pink-100 to-yellow-100">
+    <main className=" min-h-screen pt-32
+                 bg-gradient-to-br from-indigo-100 via-pink-100 to-yellow-100
+                 dark:bg-gradient-to-br dark:from-slate-900 dark:via-indigo-950 dark:to-slate-900
+                 relative overflow-hidden ">
 
       
       <div className="absolute inset-0 overflow-hidden">
@@ -14,7 +17,7 @@ export default function Quote({ quotes }: DataProps) {
       </div>
 
       <section className="max-w-6xl mx-auto px-6 relative z-10">
-        <h1 className="text-5xl font-extrabold text-gray-900 mb-12 text-center tracking-wide">
+        <h1 className="text-5xl font-extrabold text-gray-900 mb-12 dark:text-white text-center tracking-wide">
           Citations
         </h1>
 
