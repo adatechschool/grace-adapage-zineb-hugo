@@ -8,11 +8,11 @@ export default function Navbar() {
 
         
         <div className="flex items-center">
-          <img
+          <Link to="/"><img 
             src={graceLogo}
             alt="Grace Hopper"
             className="h-25 w-28 object-contain transition hover:scale-120"
-          />
+          /></Link>
         </div>
 
         
